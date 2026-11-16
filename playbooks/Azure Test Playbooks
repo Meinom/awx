@@ -1,0 +1,11 @@
+---
+- name: Test Azure VM Connectivity
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: Ping the Azure VM
+      ansible.builtin.ping:
+
+    - name: Print OS and Hostname details
+      ansible.builtin.debug:
+        msg: "Connected to {{ inventory_hostname }} running {{ ansible_distribution }} {{ ansible_distribution_version }}"
