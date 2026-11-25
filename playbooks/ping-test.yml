@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: true
   tasks:
-    - name: Ping the Azure VM
+    - name: Ping the Azure VMS
       ansible.builtin.ping:
 
     - name: Print OS and Hostname details
